@@ -1,0 +1,607 @@
+/*  1. ROOT VARIABLES */
+:root {
+    --meridian-navy: #1d2a3d;
+    --meridian-blue: #2864e6;
+    --meridian-blue-dark: #174dbf;
+
+    --meridian-light: #f6f8fa;
+    --meridian-border: #e2e6eb;
+
+    --meridian-text: #1d2a3d;
+    --meridian-gray: #7d8796;
+    --meridian-light-gray: #aeb8c7;
+
+    --bs-primary: #2864e6;
+    --bs-primary-rgb: 40, 100, 230;
+
+    --bs-dark: #1d2a3d;
+    --bs-dark-rgb: 29, 42, 61;
+
+    --bs-light: #f6f8fa;
+    --bs-light-rgb: 246, 248, 250;
+
+    --bs-body-color: #1d2a3d;
+    --bs-body-bg: #ffffff;
+
+    --bs-border-color: #e2e6eb;
+
+    --bs-link-color: #2864e6;
+    --bs-link-hover-color: #174dbf;
+}
+
+
+/* 2. GENERAL STYLES */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: var(--meridian-text);
+
+    font-family: "Montserrat", sans-serif;
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+
+    color: var(--meridian-text);
+
+    font-family: "DM Serif Display", Georgia, serif;
+
+    font-weight: 400;
+
+    line-height: 1.15;
+}
+
+p {
+    color: var(--meridian-gray);
+}
+
+
+/* 3. SKIP LINK */
+.skip-link {
+    position: absolute;
+
+    top: -100px;
+    left: 1rem;
+
+    z-index: 9999;
+
+    background: var(--meridian-blue);
+
+    color: white;
+
+    padding: 0.75rem 1rem;
+
+    text-decoration: none;
+
+    border-radius: 0.4rem;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+
+/* 4. NAV BAR */
+.site-navbar {
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #e8ebef;
+}
+
+.site-navbar .navbar-brand {
+    color: var(--meridian-navy);
+
+    font-family: "DM Serif Display", Georgia, serif;
+
+    font-size: 1.4rem;
+
+    text-decoration: none;
+}
+
+.site-navbar .nav-link {
+    padding: 0.5rem 0.85rem;
+
+    color: #697586;
+
+    font-size: 0.85rem;
+
+    font-weight: 500;
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link:focus,
+.site-navbar .nav-link.active {
+    color: var(--meridian-blue);
+}
+
+.site-navbar.navbar-toggler {
+    border: 0;
+}
+
+.site-navbar.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(40, 100, 230, 0.2);
+}
+
+
+/* 5. GET STARTED BUTTON */
+.get-started-btn {
+    padding: 0.65rem 1.3rem;
+
+    background-color: var(--meridian-blue);
+
+    border: 1px solid var(--meridian-blue);
+
+    border-radius: 0.4rem;
+
+    color: white;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.get-started-btn:hover,
+.get-started-btn:focus {
+    background-color: var(--meridian-blue-dark);
+
+    border-color: var(--meridian-blue-dark);
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* 6. BOOTSTRAP PRIMARY BUTTON OVERRIDE */
+.btn-primary {
+    --bs-btn-color: #ffffff;
+
+    --bs-btn-bg: #2864e6;
+
+    --bs-btn-border-color: #2864e6;
+
+    --bs-btn-hover-color: #ffffff;
+
+    --bs-btn-hover-bg: #174dbf;
+
+    --bs-btn-hover-border-color: #174dbf;
+
+    --bs-btn-active-bg: #174dbf;
+
+    --bs-btn-active-border-color: #174dbf;
+
+    border-radius: 0.4rem;
+
+    font-weight: 600;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    transform: translateY(-2px);
+}
+
+
+/* 7. SECTION LABEL */
+.section-label {
+    margin-bottom: 0.7rem;
+
+    color: var(--meridian-blue);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2rem;
+
+    text-transform: uppercase;
+}
+
+
+/* 8. HOME HERO */
+.home-hero {
+    background-color: var(--meridian-navy);
+
+    padding: 4.5rem 0;
+
+    color: white;
+}
+
+.home-hero h1 {
+    margin-bottom: 1.5rem;
+
+    color: white;
+
+    font-size: clamp(2.7rem, 6vw, 4.3rem);
+}
+
+.home-hero p:not(.section-label) {
+    max-width: 520px;
+
+    color: var(--meridian-light-gray);
+
+    font-size: 0.95rem;
+}
+
+.hero-copy {
+    padding-right: 0;
+}
+
+.hero-image {
+    width: 100%;
+
+    min-height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 0.7rem;
+}
+
+
+/* 9. SERVICES */
+.services-section {
+    padding: 5.5rem 0;
+
+    background-color: white;
+}
+
+.section-title {
+    margin-bottom: 1rem;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.section-intro {
+    max-width: 600px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    color: var(--meridian-gray);
+
+    font-size: 0.9rem;
+}
+
+.service-card {
+    height: 100%;
+
+    padding: 2rem 1.6rem;
+
+    background-color: white;
+
+    border: 1px solid var(--meridian-border);
+
+    border-radius: 0.7rem;
+
+    transition:
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 1rem 2rem rgba(29, 42, 61, 0.08);
+}
+
+.service-icon {
+    display: inline-block;
+
+    margin-bottom: 1.25rem;
+
+    font-size: 1.6rem;
+}
+
+.service-card h3 {
+    margin-bottom: 0.75rem;
+
+    font-size: 1.25rem;
+}
+
+.service-card p {
+    margin-bottom: 0;
+
+    font-size: 0.8rem;
+}
+
+
+/* 10. WHY MERIDIAN */
+.why-section {
+    padding: 5.5rem 0;
+
+    background-color: var(--meridian-light);
+}
+
+.office-image {
+    width: 100%;
+
+    min-height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 0.7rem;
+}
+
+.why-content h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.why-content p {
+    font-size: 0.85rem;
+}
+
+.stats-list {
+    padding: 0;
+
+    margin: 1.5rem 0 0;
+
+    list-style: none;
+}
+
+.stats-list li {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.7rem;
+
+    margin-bottom: 0.7rem;
+
+    color: #657185;
+
+    font-size: 0.85rem;
+}
+
+.stats-check {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 1.3rem;
+    height: 1.3rem;
+
+    background-color: #e3edff;
+
+    border-radius: 50%;
+
+    color: var(--meridian-blue);
+
+    font-size: 0.7rem;
+}
+
+
+/* 11. BLUE CTA */
+.cta-section {
+    padding: 5rem 0;
+
+    background-color: var(--meridian-blue);
+
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: white;
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.cta-section p {
+    color: #dce6ff;
+
+    font-size: 0.85rem;
+}
+
+
+/* 12. FOOTER */
+.site-footer {
+    padding: 4rem 0 1.5rem;
+
+    background-color: var(--meridian-navy);
+
+    color: var(--meridian-light-gray);
+}
+
+.footer-brand {
+    margin-bottom: 1rem;
+
+    color: white;
+
+    font-family: "DM Serif Display", Georgia, serif;
+
+    font-size: 1.3rem;
+}
+
+.footer-description {
+    max-width: 300px;
+
+    color: #8793a5;
+
+    font-size: 0.75rem;
+}
+
+.footer-heading {
+    margin-bottom: 1rem;
+
+    color: #8793a5;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+.footer-links {
+    padding: 0;
+
+    margin: 0;
+
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.4rem;
+}
+
+.footer-links a {
+    color: var(--meridian-light-gray);
+
+    font-size: 0.75rem;
+
+    text-decoration: none;
+
+    transition: color 0.25s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: #ffffff;
+}
+
+.footer-contact p {
+    margin-bottom: 0.4rem;
+
+    color: var(--meridian-light-gray);
+
+    font-size: 0.75rem;
+}
+
+.footer-bottom {
+    padding-top: 1.5rem;
+
+    margin-top: 2.5rem;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #667388;
+
+    font-size: 0.7rem;
+}
+
+
+/* 13. TABLET */
+@media (min-width: 768px) {
+    .home-hero {
+        padding: 5rem 0;
+    }
+
+    .hero-copy {
+        padding-right: 2rem;
+    }
+
+    .services-section,
+    .why-section {
+        padding-top: 6rem;
+
+        padding-bottom: 6rem;
+    }
+}
+
+
+/* 14. DESKTOP */
+@media (min-width: 992px) {
+    .home-hero {
+        min-height: 440px;
+
+        display: flex;
+
+        align-items: center;
+    }
+
+    .hero-image {
+        min-height: 300px;
+    }
+
+    .cta-section {
+        min-height: 300px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+    }
+
+    .site-footer {
+        padding-top: 4.5rem;
+    }
+}
+
+
+/* 15. LARGE DESKTOP */
+@media (min-width: 1400px) {
+    .home-hero {
+        padding-top: 6rem;
+
+        padding-bottom: 6rem;
+    }
+
+    .home-hero h1 {
+        font-size: 4.5rem;
+    }
+}
+
+
+/* 16. REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+    }
+}
